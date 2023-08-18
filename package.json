@@ -1,0 +1,17 @@
+{
+  "name": "savne-startuml-c4",
+  "title": "Model C4",
+  "description": "Extension for Creating C4 Diagrams",
+  "homepage": "https://savne.net/",
+  "version": "1.0.0",
+  "keywords": ["Diagramas-C4", "Savne"],
+  "author": {
+    "name": "Sebastian Fajardo",
+    "email": "sebastian.fajardo@savne.net",
+    "url": "https://github.com/SebastianFajardo"
+  },
+  "license": "MIT",
+  "engines": {
+    "staruml": ">=3.0.0"
+  }
+}

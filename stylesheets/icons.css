@@ -1,0 +1,62 @@
+.icon-C4person {
+    background-image: url("img/elements/person.png");
+    background-size: cover;
+    height: 10px;
+    width: 13px;
+    margin-top: 8px!important;
+}
+
+.icon-C4personExternal {
+    background-image: url("img/elements/person_external.png");
+    background-size: cover;
+    height: 10px;
+    width: 13px;
+    margin-top: 8px!important;
+}
+
+.icon-C4System {
+    background-image: url("img/elements/system.png");
+    background-size: cover;
+    height: 10px;
+    width: 14px;
+    margin-top: 8px!important;
+}
+
+.icon-C4SystemExternal {
+    background-image: url("img/elements/system_external.png");
+    background-size: cover;
+    height: 10px;
+    width: 13px;
+    margin-top: 8px!important;
+}
+
+.icon-C4Container {
+    background-image: url("img/elements/container.png");
+    background-size: cover;
+    height: 10px;
+    width: 13px;
+    margin-top: 8px!important;
+}
+.icon-C4Component {
+    background-image: url("img/elements/component.png");
+    background-size: cover;
+    height: 10px;
+    width: 13px;
+    margin-top: 8px!important;
+}
+
+.icon-C4MessageBussContainer {
+    background-image: url("img/elements/messageBussContainer.png");
+    background-size: cover;
+    height: 10px;
+    width: 13px;
+    margin-top: 8px!important;
+}
+
+.icon-c4Limit {
+    color: gray;
+}
+
+.icon-c4FCDatabase {
+    color: #1061B0!important;
+}

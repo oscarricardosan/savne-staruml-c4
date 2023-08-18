@@ -1,0 +1,50 @@
+{
+    "elements": {
+        "person": {
+            "name": "Ingrese el perfil de la persona que interactúa con el sistema o aplicación. Ejemplo: Cliente, Administrador, Invitado.",
+            "type": "Person",
+            "description": "Ingrese una explicación del rol o función de la persona en el sistema. Ejemplo: Cliente que realiza compras y administra su cuenta."
+        },
+        "system": {
+            "name": "Ingrese un nombre para identificar el sistema o la aplicación que se representa con este elemento. Ejemplo: Sistema de Gestión de Inventarios.",
+            "type": "Software system",
+            "description": "Ingrese una explicación de la función principal del sistema o aplicación. Ejemplo: Aplicación web para rastrear y administrar el inventario."
+        },
+        "system_limit": {
+            "name": "Ingrese un nombre claro y descriptivo. Ejemplo, si representa un sistema de inventario, puede usar 'Sistema de Inventario.'",
+            "type": "Ingrese la categoría o clasificación general. Ejemplo, 'Empresa', 'Aplicación Web' o por defecto 'Software System'."
+        },
+        "container": {
+            "name": "Ingrese un nombre para contenedor. Usa términos como 'Aplicación Web', 'Base de Datos', 'Servicio REST', etc.",
+            "type": "Ingrese las tecnologías utilizadas en su implementación. Ejemplo, si es una aplicación web, menciona 'JavaScript', 'Node.js' o 'React'. Si se trata de una base de datos, especifica la tecnología utilizada, como 'MySQL' o 'MongoDB",
+            "description": "Ingrese descripción del contenedor, responsabilidades en el sistema. Ejemplo Almacena información de registro de usuario, credenciales, etc."
+        },
+        "container_limit": {
+            "name": "Ingrese un nombre claro y descriptivo. Ejemplo, si representa un sistema de inventario, puede usar 'Sistema de Inventario.'",
+            "type": "Ingrese la categoría o clasificación general. Ejemplo, 'Empresa', 'Aplicación Web, Software system, Container'."
+        },
+        "relationship": {
+            "description": "Ingrese cómo los componentes se comunican entre sí o interactúan dentro del sistema. Ejemplo, 'Enviar mensajes a'."
+        },
+        "relation_with_technology": {
+            "description": "Ingrese cómo los componentes se comunican entre sí o interactúan dentro del sistema. Ejemplo, 'Hace llamadas a la api.",
+            "type": "Ingrese la tecnología que se usan, Ejemplo, 'JSON/HTTPS'."
+        },
+        "database": {
+            "name": "Ingrese nombre para la base de datos",
+            "type": "Ingrese la tecnología que se usa. Ejemplo, 'Oracle database Schema'",
+            "description": "Ingrese como interactua el elemento en el sistema. Ejemplo, 'Almacena información de registro de usuarios'."
+        },
+        "component": {
+            "name": "Ingrese un nombre para el componente, Ejemplo, 'Controlador de resumen de cuentas'",
+            "type": "Ingrese como se desarrolló el componente Ejemplo, 'Spring MVC Rest Controller'.",
+            "description": "Ingrese una descripción de las funcionalidades del componente en el sistema. Ejemplo 'Permite a los usuarios restablecer su contraseña'."
+        },
+        "message_bus_container": {
+            "name": "Ingrese un nombre para el contenedor. Ejemplo 'Bus de Procesamiento de Pedidos' ",
+            "type":  "Ingrese las tecnología que se utiliza. Ejemplo 'Apache Kafka'.",
+            "description": "Ingrese una descripción del elemento. Ejemplo, 'Recibe las peticiones de nuevos pedidos y las procesa'."
+        }
+
+    }
+}

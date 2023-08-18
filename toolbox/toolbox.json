@@ -1,0 +1,139 @@
+[
+  {
+    "label": "C4",
+    "id": "tool-c4",
+    "diagram-types": [ "UMLClassDiagram" ],
+    "items": [
+      {
+        "label": "Person",
+        "id": "C4Person",
+        "icon": "icon-C4person",
+        "rubberband": "rect",
+        "command": "savne-c4:add-person",
+        "command-arg": {
+          "id": "RoundRect",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "Person External",
+        "id": "C4PersonExternal",
+        "icon": "icon-C4personExternal",
+        "rubberband": "rect",
+        "command": "savne-c4:add-person-external",
+        "command-arg": {
+          "id": "RoundRect",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "System",
+        "id": "C4System",
+        "icon": "icon-C4System",
+        "rubberband": "rect",
+        "command": "savne-c4:add-system",
+        "command-arg": {
+          "id": "RoundRect",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "System External",
+        "id": "C4SystemExternal",
+        "icon": "icon-C4SystemExternal",
+        "rubberband": "rect",
+        "command": "savne-c4:add-system-external",
+        "command-arg": {
+          "id": "RoundRect",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "System Limit",
+        "id": "C4SystemLimit",
+        "icon": "icon-RoundedRectangle  icon-c4Limit",
+        "rubberband": "rect",
+        "command": "savne-c4:add-system-limit",
+        "command-arg": {
+          "id": "Text",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "Container",
+        "id": "C4Container",
+        "icon": "icon-C4Container",
+        "rubberband": "rect",
+        "command": "savne-c4:add-container",
+        "command-arg": {
+          "id": "RoundRect",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "Message Bus Container",
+        "id": "C4MessageBusContainer",
+        "icon": "icon-C4MessageBussContainer",
+        "rubberband": "rect",
+        "command": "savne-c4:add-message-bus-container",
+        "command-arg": {
+          "id": "FCDirectAccessStorage",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "Component",
+        "id": "C4Component",
+        "icon": "icon-C4Component",
+        "rubberband": "rect",
+        "command": "savne-c4:add-component",
+        "command-arg": {
+          "id": "RoundRect",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "Container Limit",
+        "id": "C4ContainerLimit",
+        "icon": "icon-RoundedRectangle icon-c4Limit",
+        "rubberband": "rect",
+        "command": "savne-c4:add-container-limit",
+        "command-arg": {
+          "id": "Text",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "Database",
+        "id": "C4Database",
+        "icon": "icon-FCDatabase icon-c4FCDatabase",
+        "rubberband": "rect",
+        "command": "savne-c4:add-database",
+        "command-arg": {
+          "id": "FCDatabase",
+          "stereotype": "my-stereotype"
+        }
+      },
+      {
+        "label": "Relationship",
+        "id": "C4Relationship",
+        "icon": "icon-UMLInterfaceRealization",
+        "rubberband": "rect",
+        "command": "savne-c4:add-relationship",
+        "command-arg": {
+          "id": "NoteLink"
+        }
+      },
+      {
+        "label": "Relationship with technology",
+        "id": "C4RelationshipWithTechnology",
+        "icon": "icon-UMLInterfaceRealization",
+        "rubberband": "rect",
+        "command": "savne-c4:add-relationship_with_technology",
+        "command-arg": {
+          "id": "NoteLink"
+        }
+      }
+    ]
+  }
+]
