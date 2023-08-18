@@ -13,21 +13,21 @@ class Template {
                             <span class="tooltip-content">${helper.elements.person.name}</span>
                          </span>
                     </div>
-                    <textarea id="name" class="k-input k-textbox input-box" rows="1">${subviews[1].text}</textarea>
+                    <textarea id="name" class="k-input k-textbox input-box" rows="1">${subviews[0].text}</textarea>
                     <div class="dialog-message c4-dialog-message">Type:
                        <span class="tooltip">
                             <i class="info-circle-icon"></i>
                             <span class="tooltip-content">${helper.elements.person.type}</span>
                          </span>
                     </div>
-                    <textarea id="type" class="k-input k-textbox input-box"  rows="1" placeholder="[type]">${subviews[2].text}</textarea>
+                    <textarea id="type" class="k-input k-textbox input-box"  rows="1" placeholder="[type]">${subviews[1].text}</textarea>
                     <div class="dialog-message c4-dialog-message">Description:
                         <span class="tooltip">
                             <i class="info-circle-icon"></i>
                             <span class="tooltip-content">${helper.elements.person.description}</span>
                         </span>
                     </div>
-                    <textarea id="description" class="k-textbox input-box" style="width: 100%">${subviews[3].text}</textarea>
+                    <textarea id="description" class="k-textbox input-box" style="width: 100%">${subviews[2].text}</textarea>
                 </div>
                 <div class="dialog-footer">
                     <button class="k-button dialog-button primary" data-button-id="ok">OK</button>

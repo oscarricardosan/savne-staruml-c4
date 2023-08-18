@@ -7,7 +7,7 @@ class PersonElement {
 
         options = Object.assign(options, {
             'model-init': {
-                stereotype: options.stereotype
+                stereotype: options.stereotype,
             },
             "view-init": {
                 height: 100,
@@ -15,7 +15,7 @@ class PersonElement {
                 fillColor: '#083F75',
                 lineColor: '#06315C',
                 fontColor: '#ffffff',
-                font : new type.Font('Helvetica', 16, 0)
+                font : new type.Font('Helvetica', 16, 0),
             }
         });
 
@@ -48,8 +48,13 @@ class PersonElement {
     }
 
     addSubviews(parent){
-        let head= new type.EllipseView();
-        app.engine.setProperty(parent, 'subViews', [head]);
+        let head = {
+            id: "Ellipse",
+            parent: parent,
+            diagram: parent._parent,
+        }
+        head= app.factory.createModelAndView(head);
+        app.engine.addItem(parent, 'containedViews', head);
 
         let name= new type.UMLTextView();
         name.text= "Person name";

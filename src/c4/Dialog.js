@@ -49,36 +49,21 @@ class Dialog {
     }
     getPersonDialog() {
         const template= this.template.getPersonTemplate(this.element);
-        let self = this;
-        this.getDialog(template)
-            .then(function (response) {
-                if (response.success === 'ok'){
-                    app.engine.setProperty(self.element.subViews[1], 'text', response.data.name);
-                    self.autoResizeTextElement(self.element.subViews[1])
-                    let str_replace= response.data.type.replace(/\[|\]/g, '').trim();
-                    app.engine.setProperty(self.element.subViews[2], 'text', `[${str_replace}]`);
-                    self.autoResizeTextElement(self.element.subViews[2])
-                    app.engine.setProperty(self.element.subViews[3], 'text', response.data.description);
-                    self.autoResizeTextElement(self.element.subViews[3])
-                }
-            })
+        this.assignGeneralTextValue(template);
     }
 
     getSystemDialog() {
-        let element = this.element
-        const template= this.template.getSystemTemplate(element);
+        const template= this.template.getSystemTemplate(this.element);
         this.assignGeneralTextValue(template);
     }
     getSystemLimitDialog(){
-        let element = this.element
         app.diagrams.selectInDiagram(this.systemc4)
-        const template= this.template.getSystemLimitTemplate(element);
+        const template= this.template.getSystemLimitTemplate(this.element);
         this.assignLimitTextValue(template);
 
     }
     getContainerDialog() {
-        let element= this.element
-        const template= this.template.getContainerTemplate(element);
+        const template= this.template.getContainerTemplate(this.element);
         this.assignGeneralTextValue(template);
     }
 
@@ -90,26 +75,21 @@ class Dialog {
             .then(function (response) {
                 if (response.success === 'ok'){
                     app.engine.setProperty(self.element.subViews[1], 'text', response.data.name);
-                    self.autoResizeTextElement(self.element.subViews[1])
                     let str_replace= response.data.type.replace(/\[|\]/g, '').trim();
                     app.engine.setProperty(self.element.subViews[2], 'text', `[${str_replace}]`);
-                    self.autoResizeTextElement(self.element.subViews[2])
                     app.engine.setProperty(self.element.subViews[3], 'text', response.data.description);
-                    self.autoResizeTextElement(self.element.subViews[3])
                 }
             })
     }
 
     getComponentDialog() {
-        let element= this.element
-        const template= this.template.getComponentTemplate(element);
+        const template= this.template.getComponentTemplate(this.element);
         this.assignGeneralTextValue(template);
     }
 
     getContainerLimitDialog() {
-        let element = this.element;
         app.diagrams.selectInDiagram(this.systemc4)
-        const template= this.template.getContainerLimitTemplate(element);
+        const template= this.template.getContainerLimitTemplate(this.element);
         this.assignLimitTextValue(template);
     }
     getRelationshipDialog(){
@@ -138,7 +118,6 @@ class Dialog {
             .then(function (response) {
                 if (response.success === 'ok'){
                     app.engine.setProperty(element.subViews[1], 'text', response.data.description);
-                    self.autoResizeTextElement(element.subViews[1]);
                 }
             })
     }
@@ -181,10 +160,8 @@ class Dialog {
                     const description_element = element.subViews[1];
                     const technology_element = element.subViews[1].subViews[1];
                     app.engine.setProperty(description_element, 'text', response.data.description);
-                    self.autoResizeTextElement(description_element)
                     let technology= response.data.technology.replace(/\[|\]/g, '').trim();
                     app.engine.setProperty(technology_element, 'text', `[${technology}]`);
-                    self.autoResizeTextElement(technology_element)
                 }
             })
     }
@@ -249,12 +226,9 @@ class Dialog {
             .then(function (response) {
                 if (response.success === 'ok'){
                     app.engine.setProperty(self.element.subViews[0], 'text', response.data.name);
-                    self.autoResizeTextElement(self.element.subViews[0])
                     let str_replace= response.data.type.replace(/\[|\]/g, '').trim();
                     app.engine.setProperty(self.element.subViews[1], 'text', `[${str_replace}]`);
-                    self.autoResizeTextElement(self.element.subViews[1])
                     app.engine.setProperty(self.element.subViews[2], 'text', response.data.description);
-                    self.autoResizeTextElement(self.element.subViews[2])
                 }
             })
     }
@@ -265,10 +239,8 @@ class Dialog {
             .then(function (response) {
                 if (response.success === 'ok'){
                     app.engine.setProperty(self.element.subViews[0], 'text', response.data.name);
-                    self.autoResizeTextElement(self.element.subViews[0])
                     let str_replace= response.data.type.replace(/\[|\]/g, '').trim();
                     app.engine.setProperty(self.element.subViews[1], 'text', `[${str_replace}]`);
-                    self.autoResizeTextElement(self.element.subViews[1])
                 }
             })
     }
