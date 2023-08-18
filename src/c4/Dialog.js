@@ -120,7 +120,7 @@ class Dialog {
                 description.alpha= 0.44;
                 description.distance= 58;
                 description.font.size = 11;
-                description.fontColor = '#626161'
+                description.fontColor = '#373737'
                 description.wordWrap = true;
                 app.engine.addModel(this.element, 'subViews', description);
 
@@ -151,7 +151,7 @@ class Dialog {
                 description.distance= 83;
                 description.text= "Description";
                 description.font.size = 11;
-                description.fontColor = '#626161';
+                description.fontColor = '#373737';
                 description.wordWrap = true
                 app.engine.addModel(this.element, 'subViews', description)
 
@@ -160,7 +160,7 @@ class Dialog {
                 technology.distance= -17;
                 technology.enabled = false;
                 technology.text= "[JSON/HTTPS]";
-                technology.fontColor = '#626161';
+                technology.fontColor = '#373737';
                 technology.wordWrap = true
                 app.engine.addModel(description, 'subViews', technology);
 
