@@ -144,6 +144,7 @@ class Refactor {
     }
 
     refactorRelationshipWithTechnology() {
+        this.element.headEndStyle = 2;
         if (this.element.subViews.length > 1){
             let description= this.element.subViews[1];
             let technology = description.subViews[1];
@@ -152,11 +153,7 @@ class Refactor {
                 technology.font.face= description.font.face;
                 technology.font.size= description.font.size -2;
             }
-        }else{
-            this.element.headEndStyle = 2;
         }
-
-
     }
 
     refactorDatabase() {
