@@ -49,7 +49,16 @@ class Dialog {
     }
     getPersonDialog() {
         const template= this.template.getPersonTemplate(this.element);
-        this.assignGeneralTextValue(template);
+        let self = this;
+        this.getDialog(template)
+            .then(function (response) {
+                if (response.success === 'ok'){
+                    app.engine.setProperty(self.element.subViews[1], 'text', response.data.name);
+                    let str_replace= response.data.type.replace(/\[|\]/g, '').trim();
+                    app.engine.setProperty(self.element.subViews[2], 'text', `[${str_replace}]`);
+                    app.engine.setProperty(self.element.subViews[3], 'text', response.data.description);
+                }
+            })
     }
 
     getSystemDialog() {

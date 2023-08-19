@@ -48,13 +48,8 @@ class PersonElement {
     }
 
     addSubviews(parent){
-        let head = {
-            id: "Ellipse",
-            parent: parent,
-            diagram: parent._parent,
-        }
-        head= app.factory.createModelAndView(head);
-        app.engine.addItem(parent, 'containedViews', head);
+        let head= new type.EllipseView();
+        app.engine.setProperty(parent, 'subViews', [head]);
 
         let name= new type.UMLTextView();
         name.text= "Person name";

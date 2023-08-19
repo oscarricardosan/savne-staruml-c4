@@ -54,7 +54,7 @@ class Refactor {
         let left= this.element.left + this.element.width/3;
         let top = this.element.top - this.element.width/3.3;
 
-        let head = this.element.containedViews[0];
+        let head = this.element.subViews[0];
         head.top= top;
         head.left= left;
         head.enabled= false;
@@ -64,9 +64,9 @@ class Refactor {
         head.lineColor = this.element.lineColor;
         head.fontColor = this.element.fontColor;
 
-        let name= this.element.subViews[0];
-        let type= this.element.subViews[1];
-        let description= this.element.subViews[2];
+        let name= this.element.subViews[1];
+        let type= this.element.subViews[2];
+        let description= this.element.subViews[3];
         this.refactorTextTop(name, type, description)
 
     }
