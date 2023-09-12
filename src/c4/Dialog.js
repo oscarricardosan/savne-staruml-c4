@@ -6,9 +6,10 @@ class Dialog {
     constructor() {
         this.template= Template.new()
     }
-    show(system_c4, x ,y ){
+    show(element, system_c4 ){
+        this.element = element;
         this.systemc4 = system_c4
-        this.element = this.systemc4._parent;
+
         switch (system_c4.text) {
             case config.system_ids.person:
                 this.getPersonDialog();
@@ -63,10 +64,9 @@ class Dialog {
     }
 
     getSystemLimitDialog(){
-        app.diagrams.selectInDiagram(this.systemc4)
+        app.diagrams.selectInDiagram(this.element)
         const template= this.template.getSystemLimitTemplate(this.element);
         this.assignLimitTextValue(template);
-
     }
 
     getContainerDialog() {
@@ -95,7 +95,7 @@ class Dialog {
     }
 
     getContainerLimitDialog() {
-        app.diagrams.selectInDiagram(this.systemc4)
+        app.diagrams.selectInDiagram(this.element)
         const template= this.template.getContainerLimitTemplate(this.element);
         this.assignLimitTextValue(template);
     }
@@ -115,7 +115,7 @@ class Dialog {
                 app.engine.addModel(this.element, 'subViews', description);
 
                 let label_sys=  new type.LabelView();
-                Object.assign({
+                Object.assign(label_sys,{
                     text: config.system_ids.relationship,
                     visible: false
                 });
@@ -139,7 +139,7 @@ class Dialog {
         if (element instanceof type.UMLNoteLinkView){
             if (element.subViews.length < 2){
                 let description= new type.EdgeLabelView();
-                Object.assign( new type.EdgeLabelView(),{
+                Object.assign(description,{
                     alpha: 0.30,
                     distance: 83,
                     text: "Description",
@@ -161,7 +161,7 @@ class Dialog {
                 app.engine.addModel(description, 'subViews', technology);
 
                 let label_sys=  new type.LabelView();
-                Object.assign({
+                Object.assign(label_sys,{
                     text: config.system_ids.relationship_with_technology,
                     visible: false
                 });

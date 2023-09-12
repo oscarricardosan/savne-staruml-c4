@@ -2,12 +2,11 @@ const config = require("./Config");
 class Refactor {
     element;
     constructor() {}
-    refactorElement(system_element){
-        const system_id = system_element.text;
-        this.element= system_element._parent;
-        this.refactorC4System(system_element);
+    refactorElement(element, system){
+        this.element= element;
+        this.refactorC4System(system);
 
-        switch (system_id) {
+        switch (system.text) {
             case config.system_ids.person:
                 this.refactorPerson();
                 break;
@@ -136,6 +135,8 @@ class Refactor {
             autoResize: false
         });
 
+        this.element.subViews[0].text = '';
+
         let name = this.element.subViews[1];
         let type = this.element.subViews[2];
         let description = this.element.subViews[3]
@@ -179,15 +180,21 @@ class Refactor {
     }
 
     refactorDatabase() {
-        this.element.minHeight = 81;
-        this.element.minWidth = 160;
+
+        Object.assign(this.element, {
+            minHeight: 81,
+            minWidth: 160,
+            autoResize: false
+        });
+
+        this.element.subViews[0].text = '';
 
         let name= this.element.subViews[1];
-        let description= this.element.subViews[3];name
         let type= this.element.subViews[2];
+        let description= this.element.subViews[3];
         this.refactorTextTop(name, type, description)
 
-        name.top= this.element.top + this.element.height/3 - 10;
+        name.top= this.element.top + this.element.height/3 - 8;
         type.top= name.bottom;
         description.top= type.bottom - 2;
 
@@ -239,7 +246,8 @@ class Refactor {
     }
 
     refactorTextBottom(name, view_type){
-        Object.assign(name, {
+
+        Object.assign(view_type, {
             selectable: false,
             horzAlign: 0,
             top: this.element.bottom - 18 - this.element.font.size,
@@ -247,7 +255,7 @@ class Refactor {
             left: this.element.left +2,
             fontColor: this.element.fontColor,
             font: new type.Font(this.element.font.face, this.element.font.size, 0),
-            wordWrap: true,
+            wordWrap: false
         });
 
         Object.assign(name, {
@@ -258,7 +266,7 @@ class Refactor {
             width: this.element.width,
             fontColor: this.element.fontColor,
             font: new type.Font(this.element.font.face, this.element.font.size, 0),
-            wordWrap: true
+            wordWrap: false
         });
     }
 }

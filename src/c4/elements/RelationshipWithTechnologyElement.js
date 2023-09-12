@@ -5,13 +5,18 @@ class RelationshipWithTechnologyElement {
     }
     addRelationshipWithTechnology(options){
         try {
-            let parent= app.factory.createModelAndView(options)
-            parent.lineColor = '#828282';
-            parent.headEndStyle = 2;
-
             let label_sys=  new type.LabelView();
             label_sys.text= this.config.system_ids.relationship_with_technology;
-            app.engine.addModel(parent, 'subViews', label_sys);
+
+            options = Object.assign(options, {
+                "view-init": {
+                    headEndStyle: 2,
+                    lineColor: '#828282',
+                    subViews: [label_sys]
+                }
+            });
+
+            app.factory.createModelAndView(options)
 
         }catch (exception){
             if (exception.message === 'Cannot read properties of null (reading \'getBoundingBox\')')

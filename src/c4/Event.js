@@ -12,7 +12,7 @@ class Event {
                 view => Object.values(Config.system_ids).includes(view.text)
             );
             if (!element_system) return false;
-            dialog.show(element_system)
+            dialog.show(view, element_system)
         });
     }
 
@@ -39,7 +39,7 @@ class Event {
             const element_system = view.subViews.find(
                 view => Object.values(Config.system_ids).includes(view.text)
             );
-            if (element_system) refactor.refactorElement(element_system)
+            if (element_system) refactor.refactorElement(view, element_system)
         })
     }
 

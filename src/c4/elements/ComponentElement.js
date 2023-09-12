@@ -15,37 +15,33 @@ class ComponentElement {
                 fillColor: '#63BEF2',
                 lineColor: '#63BEF2',
                 fontColor: '#ffffff',
-                font : new type.Font('Arial', 16, 0)
+                font : new type.Font('Helvetica', 16, 0),
+                subViews: this.getSubViews()
             }
         });
-
-        let parent = app.factory.createModelAndView(options);
-        this.addSubViews(parent);
+        return app.factory.createModelAndView(options);
     }
-    addSubViews(parent){
+    getSubViews(){
         let name= new type.UMLTextView();
         name.text= "Component name";
         name.horzAlign= 2;
+        name.height= 28;
         name.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', name);
 
         let label_type= new type.UMLTextView();
         label_type.text= "[Container: ejem. E-mail service]";
         label_type.horzAlign= 2;
         label_type.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', label_type);
 
         let description= new type.UMLTextView();
         description.text= "Description";
         description.horzAlign= 2;
         description.wordWrap= false
 
-        app.engine.addModel(parent, 'subViews', description);
-
         let label_sys=  new type.LabelView();
         label_sys.text= this.config.system_ids.component;
-        app.engine.addModel(parent, 'subViews', label_sys);
 
+        return [name, label_type, description, label_sys];
     }
 
     init(){

@@ -6,12 +6,18 @@ class RelationshipElement {
     }
     addRelationship(options){
         try {
-            let parent= app.factory.createModelAndView(options)
-            parent.headEndStyle = 2;
-            parent.lineColor = '#828282';
             let label_sys=  new type.LabelView();
             label_sys.text= this.config.system_ids.relationship;
-            app.engine.addModel(parent, 'subViews', label_sys);
+
+            options = Object.assign(options, {
+                "view-init": {
+                    headEndStyle: 2,
+                    lineColor: '#828282',
+                    subViews: [label_sys]
+                }
+            });
+
+            app.factory.createModelAndView(options)
 
         }catch (exception){
             if (exception.message === 'Cannot read properties of null (reading \'getBoundingBox\')')

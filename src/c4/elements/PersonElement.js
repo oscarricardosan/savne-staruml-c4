@@ -4,7 +4,6 @@ class PersonElement {
         this.config = Config;
     }
     addPerson(options){
-
         options = Object.assign(options, {
             'model-init': {
                 stereotype: options.stereotype,
@@ -16,12 +15,11 @@ class PersonElement {
                 lineColor: '#06315C',
                 fontColor: '#ffffff',
                 font : new type.Font('Helvetica', 16, 0),
+                subViews: this.getSubviews(),
             }
         });
 
-        let parent = app.factory.createModelAndView(options);
-        this.addSubviews(parent)
-        return parent;
+        return app.factory.createModelAndView(options);
     }
 
     addPersonExternal(options){
@@ -38,42 +36,37 @@ class PersonElement {
                 font : new type.Font('Helvetica', 16, 0),
                 minHeight: 100,
                 minWidth: 180,
-                autoResize: false
+                autoResize: false,
+                subViews: this.getSubviews()
             }
         });
 
-        let parent = app.factory.createModelAndView(options)
-        this.addSubviews(parent)
-        return parent;
+        return app.factory.createModelAndView(options);
     }
 
-    addSubviews(parent){
+    getSubviews(){
         let head= new type.EllipseView();
-        app.engine.setProperty(parent, 'subViews', [head]);
 
         let name= new type.UMLTextView();
         name.text= "Person name";
         name.horzAlign= 2;
         name.height= 28;
         name.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', name);
 
         let label_type=  new type.UMLTextView();
         label_type.text= "[Person]";
         label_type.horzAlign= 2;
-        type.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', label_type);
+        label_type.wordWrap= false;
 
         let description=  new type.UMLTextView();
         description.text= "Description";
         description.horzAlign= 2;
-        type.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', description);
+        description.wordWrap= false;
 
         let label_sys=  new type.LabelView();
         label_sys.text= this.config.system_ids.person;
-        app.engine.addModel(parent, 'subViews', label_sys);
 
+        return [head, name, label_type, description, label_sys];
     }
 
     init(){

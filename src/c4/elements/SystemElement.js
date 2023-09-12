@@ -15,12 +15,12 @@ class SystemElement {
                 fillColor: '#1061B0',
                 lineColor: '#0D5091',
                 fontColor: '#ffffff',
-                font : new type.Font('Helvetica', 16, 0)
+                font : new type.Font('Helvetica', 16, 0),
+                subViews: this.getSubViews()
             }
         });
 
-        let parent = app.factory.createModelAndView(options);
-        this.addSubViews(parent);
+        app.factory.createModelAndView(options);
     }
 
     addSystemExternal(options){
@@ -37,37 +37,35 @@ class SystemElement {
                 font : new type.Font('Helvetica', 16, 0),
                 minHeight: 100,
                 minWidth: 180,
-                autoResize: false
-
+                autoResize: false,
+                subViews: this.getSubViews()
             }
         });
 
-        let parent = app.factory.createModelAndView(options);
-        this.addSubViews(parent);
+       app.factory.createModelAndView(options);
     }
-    addSubViews(parent){
+
+    getSubViews(){
         let name= new type.UMLTextView();
         name.text= "System name";
         name.horzAlign= 2;
+        name.height= 28;
         name.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', name);
 
         let label_type= new type.UMLTextView();
         label_type.text= "[Software System]";
         label_type.horzAlign= 2;
         label_type.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', label_type);
 
         let description= new type.UMLTextView();
         description.text= "Description";
         description.horzAlign= 2;
         description.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', description);
 
         let label_sys=  new type.LabelView();
         label_sys.text= this.config.system_ids.system;
-        app.engine.addModel(parent, 'subViews', label_sys);
 
+        return [name, label_type, description, label_sys]
     }
 
     init(){

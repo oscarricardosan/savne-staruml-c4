@@ -18,7 +18,7 @@ class Load {
                 view => Object.values(Config.system_ids).includes(view.text)
             );
 
-            if (element_system) refactor.refactorElement(element_system);
+            if (element_system) refactor.refactorElement(view, element_system);
         })
     }
 

@@ -18,34 +18,33 @@ class ContainerElement {
                 font : new type.Font('Helvetica', 16, 0),
                 minHeight: 100,
                 minWidth: 180,
+                subViews: this.getSubViews()
             }
         });
 
-        let parent = app.factory.createModelAndView(options);
-        this.addSubViews(parent);
+        app.factory.createModelAndView(options);
     }
-    addSubViews(parent){
+    getSubViews(parent){
         let name= new type.UMLTextView();
         name.text= "Container name";
         name.horzAlign= 2;
+        name.height= 28;
         name.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', name);
 
         let label_type= new type.UMLTextView();
         label_type.text= "[Container:ejem. Java]";
         label_type.horzAlign= 2;
         label_type.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', label_type);
 
         let description= new type.UMLTextView();
         description.text= "Description";
         description.horzAlign= 2;
         description.wordWrap= false;
-        app.engine.addModel(parent, 'subViews', description);
 
         let label_sys=  new type.LabelView();
         label_sys.text= this.config.system_ids.container;
-        app.engine.addModel(parent, 'subViews', label_sys);
+
+        return [name, label_type, description, label_sys];
     }
 
     init(){
