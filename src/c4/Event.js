@@ -12,7 +12,7 @@ class Event {
                 view => Object.values(Config.system_ids).includes(view.text)
             );
             if (!element_system) return false;
-            dialog.show(element_system, x, y)
+            dialog.show(element_system)
         });
     }
 

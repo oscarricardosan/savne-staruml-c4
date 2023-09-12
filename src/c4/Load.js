@@ -6,7 +6,6 @@ class Load {
     loadGeneral(){
         const self = this;
         app.repository.select("@Diagram").forEach(function (diagram) {
-
             self.refactorElement(diagram.ownedViews);
         })
     }
@@ -27,7 +26,7 @@ class Load {
         const self = this;
         setTimeout(function ()  {
             self.loadGeneral();
-        }, 100)
+        })
     }
 }
 

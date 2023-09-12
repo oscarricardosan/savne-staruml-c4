@@ -3,17 +3,12 @@ const Template = require("./Template")
 class Dialog {
     systemc4;
     element;
-    x = 0;
-    y = 0;
-
     constructor() {
         this.template= Template.new()
     }
     show(system_c4, x ,y ){
         this.systemc4 = system_c4
         this.element = this.systemc4._parent;
-        this.x = x;
-        this.y = y;
         switch (system_c4.text) {
             case config.system_ids.person:
                 this.getPersonDialog();
@@ -47,6 +42,7 @@ class Dialog {
                 return false;
         }
     }
+
     getPersonDialog() {
         const template= this.template.getPersonTemplate(this.element);
         let self = this;
@@ -65,12 +61,14 @@ class Dialog {
         const template= this.template.getSystemTemplate(this.element);
         this.assignGeneralTextValue(template);
     }
+
     getSystemLimitDialog(){
         app.diagrams.selectInDiagram(this.systemc4)
         const template= this.template.getSystemLimitTemplate(this.element);
         this.assignLimitTextValue(template);
 
     }
+
     getContainerDialog() {
         const template= this.template.getContainerTemplate(this.element);
         this.assignGeneralTextValue(template);
@@ -101,28 +99,33 @@ class Dialog {
         const template= this.template.getContainerLimitTemplate(this.element);
         this.assignLimitTextValue(template);
     }
+
     getRelationshipDialog(){
         let element = this.element;
         if (element instanceof type.UMLNoteLinkView){
             if (element.subViews.length <= 1){
                 let description=  new type.EdgeLabelView();
-                description.alpha= 0.44;
-                description.distance= 58;
-                description.font.size = 11;
-                description.fontColor = '#373737'
-                description.wordWrap = true;
+                Object.assign(description,{
+                    alpha: 0.44,
+                    distance: 58,
+                    font: new type.Font('Helvetica', 11, 0),
+                    fontColor: '#373737',
+                    wordWrap: true
+                });
                 app.engine.addModel(this.element, 'subViews', description);
 
                 let label_sys=  new type.LabelView();
-                label_sys.text= config.system_ids.relationship;
-                label_sys.visible= false;
+                Object.assign({
+                    text: config.system_ids.relationship,
+                    visible: false
+                });
                 app.engine.addModel(description, 'subViews', label_sys);
             }
         }else{
             element = this.element._parent;
         }
+
         const template= this.template.getRelationTemplate(element);
-        let self = this;
         this.getDialog(template)
             .then(function (response) {
                 if (response.success === 'ok'){
@@ -130,31 +133,38 @@ class Dialog {
                 }
             })
     }
+
     getRelationshipWithTechnologyDialog(){
         let element = this.element;
         if (element instanceof type.UMLNoteLinkView){
             if (element.subViews.length < 2){
-                let description=  new type.EdgeLabelView();
-                description.alpha= 0.30;
-                description.distance= 83;
-                description.text= "Description";
-                description.font.size = 11;
-                description.fontColor = '#373737';
-                description.wordWrap = true
+                let description= new type.EdgeLabelView();
+                Object.assign( new type.EdgeLabelView(),{
+                    alpha: 0.30,
+                    distance: 83,
+                    text: "Description",
+                    font: new type.Font('Helvetica', 11, 0),
+                    fontColor: '#373737',
+                    wordWrap: true
+                });
                 app.engine.addModel(this.element, 'subViews', description)
 
                 let technology=  new type.NodeLabelView();
-                technology.alpha= 1.6;
-                technology.distance= -17;
-                technology.enabled = false;
-                technology.text= "[JSON/HTTPS]";
-                technology.fontColor = '#373737';
-                technology.wordWrap = true
+                Object.assign(technology,{
+                    alpha: 1.6,
+                    distance: -17,
+                    enabled: false,
+                    text: "[JSON/HTTPS]",
+                    fontColor: '#373737',
+                    wordWrap: true
+                });
                 app.engine.addModel(description, 'subViews', technology);
 
                 let label_sys=  new type.LabelView();
-                label_sys.text= config.system_ids.relationship_with_technology;
-                label_sys.visible= false;
+                Object.assign({
+                    text: config.system_ids.relationship_with_technology,
+                    visible: false
+                });
                 app.engine.addModel(description, 'subViews', label_sys);
             }
         }else{
@@ -252,11 +262,6 @@ class Dialog {
                     app.engine.setProperty(self.element.subViews[1], 'text', `[${str_replace}]`);
                 }
             })
-    }
-
-    autoResizeTextElement(element){
-        app.engine.setProperty(element, 'autoResize', true);
-        app.engine.setProperty(element, 'autoResize', false);
     }
 }
 exports.new= function () {
