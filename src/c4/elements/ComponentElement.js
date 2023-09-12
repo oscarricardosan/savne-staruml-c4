@@ -29,7 +29,7 @@ class ComponentElement {
         name.wordWrap= false;
 
         let label_type= new type.UMLTextView();
-        label_type.text= "[Container: ejem. E-mail service]";
+        label_type.text= "[Component: ejem. E-mail service]";
         label_type.horzAlign= 2;
         label_type.wordWrap= false;
 
