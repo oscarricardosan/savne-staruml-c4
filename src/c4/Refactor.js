@@ -255,7 +255,7 @@ class Refactor {
             left: this.element.left +2,
             fontColor: this.element.fontColor,
             font: new type.Font(this.element.font.face, this.element.font.size, 0),
-            wordWrap: false
+            wordWrap: true
         });
 
         Object.assign(name, {
@@ -266,7 +266,7 @@ class Refactor {
             width: this.element.width,
             fontColor: this.element.fontColor,
             font: new type.Font(this.element.font.face, this.element.font.size, 0),
-            wordWrap: false
+            wordWrap: true
         });
     }
 }
