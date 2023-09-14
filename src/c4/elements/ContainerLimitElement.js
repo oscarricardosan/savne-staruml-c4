@@ -22,6 +22,7 @@ class ContainerLimitElement {
         let name= new type.UMLTextView();
         name.text= "Container name";
         name.horzAlign= 2;
+        name.height = 25;
 
         let label_type=  new type.UMLTextView();
         label_type.text= "[container]";

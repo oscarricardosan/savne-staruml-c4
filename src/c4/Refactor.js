@@ -180,7 +180,6 @@ class Refactor {
     }
 
     refactorDatabase() {
-
         Object.assign(this.element, {
             minHeight: 81,
             minWidth: 160,
@@ -205,69 +204,65 @@ class Refactor {
     }
 
     refactorTextTop(name, view_type, description){
-        Object.assign(name, {
+        const commonConfig = {
             selectable: false,
-            top: this.element.top + 7,
             horzAlign: 2,
             left: this.element.left,
             width: this.element.width,
-            fontColor : this.element.fontColor,
+            fontColor: this.element.fontColor,
             font: new type.Font(this.element.font.face, this.element.font.size, 0),
             wordWrap : false
+        };
+
+        Object.assign(name, commonConfig, {
+            top: this.element.top + 7,
+            font: new type.Font(this.element.font.face, this.element.font.size, 0),
         });
 
-        Object.assign(view_type, {
-            selectable: false,
-            horzAlign: 2,
+        Object.assign(view_type, commonConfig, {
             top: name.bottom,
-            left: this.element.left,
-            width: this.element.width,
             height : this.element.height/4,
-            fontColor : this.element.fontColor,
             font: new type.Font(this.element.font.face, this.element.font.size- 5, 0),
-            wordWrap : false
         });
 
-        Object.assign(description, {
-            selectable: false,
-            horzAlign: 2,
+        Object.assign(description, commonConfig, {
             top: view_type.bottom,
-            left: this.element.left,
-            width: this.element.width,
-            fontColor : this.element.fontColor,
             font: new type.Font(this.element.font.face, this.element.font.size- 5, 0),
-            wordWrap : false
         });
 
         if (description.bottom > this.element.bottom){
-            Object.assign(name, {height: name.height/2});
-            Object.assign(view_type, {height: view_type.height/2});
+            name.height = name.height/2;
+            view_type.height= view_type.height/2;
         }
     }
 
     refactorTextBottom(name, view_type){
-
-        Object.assign(view_type, {
+        const commonConfig = {
             selectable: false,
             horzAlign: 0,
-            top: this.element.bottom - 18 - this.element.font.size,
-            width: this.element.width,
-            left: this.element.left +2,
-            fontColor: this.element.fontColor,
-            font: new type.Font(this.element.font.face, this.element.font.size, 0),
-            wordWrap: true
-        });
-
-        Object.assign(name, {
-            selectable: false,
-            horzAlign: 0,
-            top: view_type.top - this.element.font.size,
             left: this.element.left + 2,
-            width: this.element.width,
+            width: this.element.width - 2,
             fontColor: this.element.fontColor,
             font: new type.Font(this.element.font.face, this.element.font.size, 0),
-            wordWrap: true
+            wordWrap: true,
+        };
+
+        Object.assign(name, commonConfig, {
+            top: this.element.bottom - 50,
         });
+
+        Object.assign(view_type, commonConfig, {
+            top: name.bottom - 5,
+        });
+
+        if (view_type.bottom > this.element.bottom) {
+            const overlap = view_type.bottom - this.element.bottom;
+            name.top -= overlap;
+            name.height = name.height/2;
+
+            view_type.top = name.bottom - 5;
+            view_type.height = view_type.height/2;
+        }
     }
 }
 

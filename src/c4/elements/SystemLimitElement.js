@@ -20,6 +20,7 @@ class SystemLimitElement {
     getSubViews(){
         let name= new type.UMLTextView();
         name.text= "System name";
+        name.height = 25;
         name.horzAlign= 2;
 
         let label_type=  new type.UMLTextView();

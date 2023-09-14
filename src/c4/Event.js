@@ -7,12 +7,11 @@ class Event {
     constructor() {}
     doubleClicked(){
         app.diagrams.on('viewDoubleClicked', (view, x, y) => {
-            if (view.subViews.length === 0) return false;
-            const element_system = view.subViews.find(
-                view => Object.values(Config.system_ids).includes(view.text)
-            );
+            const element_system = view?.subViews.find(subView => {
+                return Object.values(Config.system_ids).includes(subView.text);
+            });
             if (!element_system) return false;
-            dialog.show(view, element_system)
+            dialog.show(view, element_system);
         });
     }
 
