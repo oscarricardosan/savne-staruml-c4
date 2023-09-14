@@ -1,8 +1,8 @@
-.c4-dialog-message {
+.savne-c4-dialog-message {
     margin-top: 2%;
 }
 
-.tooltip .tooltip-content {
+.savne-tooltip .savne-tooltip-content {
     visibility: hidden;
     display: inline-block;
     padding: 10px;
@@ -14,11 +14,11 @@
     margin-right: 2%;
 }
 
-.tooltip:hover .tooltip-content {
+.savne-tooltip:hover .savne-tooltip-content {
     visibility: visible;
 }
 
-.tooltip .tooltip-content::before {
+.savne-tooltip .savne-tooltip-content::before {
     content: "";
     border-style: solid;
     border-width: 0 10px 10px 10px;
@@ -29,7 +29,7 @@
     transform: translateX(-50%);
 }
 
-.tooltip .tooltip-content::after {
+.savne-tooltip .savne-tooltip-content::after {
     content: "";
     border-style: solid;
     border-width: 0 8px 8px 8px;
@@ -40,7 +40,7 @@
     transform: translateX(-50%);
 }
 
-.info-circle-icon {
+.savne-info-circle-icon {
     display: inline-block;
     width: 11px;
     height: 11px;
@@ -50,7 +50,7 @@
     color: #fff;
 }
 
-.info-circle-icon::before {
+.savne-info-circle-icon::before {
     content: "\i";
     font-family: Arial, sans-serif;
     font-style: normal;

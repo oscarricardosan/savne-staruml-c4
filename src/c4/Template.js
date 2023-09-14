@@ -8,23 +8,23 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="Person" data-role="window" tabindex="0">
                 <div class="dialog-body">                 
                     <div class="dialog-message">Name:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.person.name}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.person.name}</span>
                          </span>
                     </div>
                     <textarea id="name" class="k-input k-textbox input-box" rows="1">${subviews[1].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Type:
-                       <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.person.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Type:
+                       <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.person.type}</span>
                          </span>
                     </div>
                     <textarea id="type" class="k-input k-textbox input-box"  rows="1" placeholder="[type]">${subviews[2].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Description:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.person.description}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Description:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.person.description}</span>
                         </span>
                     </div>
                     <textarea id="description" class="k-textbox input-box" style="width: 100%">${subviews[3].text}</textarea>
@@ -43,23 +43,23 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="System" data-role="window" tabindex="0">
                 <div class="dialog-body">
                     <div class="dialog-message">Name:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.system.name}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.system.name}</span>
                         </span>
                     </div>
                     <textarea id="name" class="k-input k-textbox input-box" rows="1">${subviews[0].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Type:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.system.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Type:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.system.type}</span>
                         </span>
                     </div>
                     <textarea id="type" class="k-input k-textbox input-box"  rows="1" placeholder="[type]">${subviews[1].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Description:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.system.description}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Description:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.system.description}</span>
                         </span>
                     </div>
                     <textarea id="description" class="k-textbox input-box" rows="4">${subviews[2].text}</textarea>
@@ -77,16 +77,16 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="System Limit" data-role="window" tabindex="0">
                 <div class="dialog-body">
                     <div class="dialog-message">Name:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.system_limit.name}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.system_limit.name}</span>
                         </span>
                     </div>
                     <input type="text" id="name" class="k-input k-textbox input-box" value="${subviews[0].text}">
-                    <div class="dialog-message c4-dialog-message">Type:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.system_limit.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Type:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.system_limit.type}</span>
                         </span>
                     </div>
                     <input type="text" id="type" class="k-input k-textbox input-box" value="${subviews[1].text}">                
@@ -104,23 +104,23 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="Container" data-role="window" tabindex="0">
                <div class="dialog-body">
                     <div class="dialog-message">Name:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.container.name}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.container.name}</span>
                         </span>
                     </div>
                     <textarea id="name" class="k-input k-textbox input-box" rows="1">${subviews[0].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Type:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.container.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Type:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.container.type}</span>
                         </span>
                     </div>
                     <textarea id="type" class="k-input k-textbox input-box"  rows="1" placeholder="[type]">${subviews[1].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Description:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.container.description}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Description:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.container.description}</span>
                         </span>
                     </div>
                     <textarea id="description" class="k-textbox input-box" rows="4">${subviews[2].text}</textarea>
@@ -138,16 +138,16 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="Container Limit" data-role="window" tabindex="0">
                 <div class="dialog-body">
                     <div class="dialog-message">Name:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.container_limit.name}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.container_limit.name}</span>
                         </span>
                     </div>
                     <input type="text" id="name" class="k-input k-textbox input-box" value="${subviews[0].text}">
-                    <div class="dialog-message c4-dialog-message">Type:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.container_limit.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Type:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.container_limit.type}</span>
                         </span>
                     </div>
                     <input type="text" id="type" class="k-input k-textbox input-box" value="${subviews[1].text}">                
@@ -165,10 +165,10 @@ class Template {
         return `         
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="Relationship" data-role="window" tabindex="0">
                 <div class="dialog-body">
-                    <div class="dialog-message c4-dialog-message">Description:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.relationship.description}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Description:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.relationship.description}</span>
                         </span>                    
                     </div>
                     <input type="text" id="description" class="k-input k-textbox input-box" value="${description}">                                  
@@ -187,16 +187,16 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="Relationship With Technology" data-role="window" tabindex="0">
                 <div class="dialog-body">
                     <div class="dialog-message">Description:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.relation_with_technology.description}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.relation_with_technology.description}</span>
                         </span>       
                     </div>
                     <input type="text" id="description" class="k-input k-textbox input-box" value="${description}">
-                    <div class="dialog-message c4-dialog-message">Technology:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.relation_with_technology.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Technology:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.relation_with_technology.type}</span>
                         </span>       
                     </div>
                     <input type="text" id="technology" class="k-input k-textbox input-box" value="${technology}">                
@@ -215,23 +215,23 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="Database" data-role="window" tabindex="0">
                 <div class="dialog-body">
                     <div class="dialog-message">Name:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.database.name}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.database.name}</span>
                         </span>  
                     </div>
                     <textarea id="name" class="k-input k-textbox input-box" rows="1">${subviews[1].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Type:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.database.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Type:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.database.type}</span>
                         </span>  
                     </div>
                     <textarea id="type" class="k-input k-textbox input-box"  rows="1" placeholder="[type]">${subviews[2].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Description:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.database.description}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Description:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.database.description}</span>
                         </span>  
                     </div>
                     <textarea id="description" class="k-textbox text-box primary" style="width: 100%">${subviews[3].text}</textarea>
@@ -250,23 +250,23 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="Component" data-role="window" tabindex="0">
                 <div class="dialog-body">
                     <div class="dialog-message">Name:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.component.name}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.component.name}</span>
                         </span>  
                     </div>
                     <textarea id="name" class="k-input k-textbox input-box" rows="1">${subviews[0].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Type:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.component.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Type:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.component.type}</span>
                         </span>  
                     </div>
                     <textarea id="type" class="k-input k-textbox input-box"  rows="1" placeholder="[type]">${subviews[1].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Description:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.component.description}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Description:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.component.description}</span>
                         </span>  
                     </div>
                     <textarea id="description" class="k-textbox text-box primary" style="width: 100%">${subviews[2].text}</textarea>
@@ -285,23 +285,23 @@ class Template {
             <div class="input-dialog dialog modal instance k-window-content k-content" data-title="Message Bus Container" data-role="window" tabindex="0">
                 <div class="dialog-body">
                     <div class="dialog-message">Name:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.message_bus_container.name}</span>
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.message_bus_container.name}</span>
                         </span>  
                     </div>
                     <textarea id="name" class="k-input k-textbox input-box" rows="1">${subviews[1].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Type:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.message_bus_container.type}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Type:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.message_bus_container.type}</span>
                         </span>  
                     </div>
                     <textarea id="type" class="k-input k-textbox input-box"  rows="1" placeholder="[type]">${subviews[2].text}</textarea>
-                    <div class="dialog-message c4-dialog-message">Description:
-                        <span class="tooltip">
-                            <i class="info-circle-icon"></i>
-                            <span class="tooltip-content">${helper.elements.message_bus_container.description}</span>
+                    <div class="dialog-message savne-c4-dialog-message">Description:
+                        <span class="savne-tooltip">
+                            <i class="savne-info-circle-icon"></i>
+                            <span class="savne-tooltip-content">${helper.elements.message_bus_container.description}</span>
                         </span>  
                     </div>
                     <textarea id="description" class="k-textbox text-box primary" style="width: 100%">${subviews[3].text}</textarea>

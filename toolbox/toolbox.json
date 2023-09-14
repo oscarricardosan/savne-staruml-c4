@@ -6,8 +6,8 @@
     "items": [
       {
         "label": "Person",
-        "id": "C4Person",
-        "icon": "icon-C4person",
+        "id": "SavneC4Person",
+        "icon": "icon-SavneC4person",
         "rubberband": "rect",
         "command": "savne-c4:add-person",
         "command-arg": {
@@ -17,8 +17,8 @@
       },
       {
         "label": "Person External",
-        "id": "C4PersonExternal",
-        "icon": "icon-C4personExternal",
+        "id": "SavneC4PersonExternal",
+        "icon": "icon-SavneC4personExternal",
         "rubberband": "rect",
         "command": "savne-c4:add-person-external",
         "command-arg": {
@@ -28,8 +28,8 @@
       },
       {
         "label": "System",
-        "id": "C4System",
-        "icon": "icon-C4System",
+        "id": "SavneC4System",
+        "icon": "icon-SavneC4System",
         "rubberband": "rect",
         "command": "savne-c4:add-system",
         "command-arg": {
@@ -39,8 +39,8 @@
       },
       {
         "label": "System External",
-        "id": "C4SystemExternal",
-        "icon": "icon-C4SystemExternal",
+        "id": "SavneC4SystemExternal",
+        "icon": "icon-SavneC4SystemExternal",
         "rubberband": "rect",
         "command": "savne-c4:add-system-external",
         "command-arg": {
@@ -50,8 +50,8 @@
       },
       {
         "label": "System Limit",
-        "id": "C4SystemLimit",
-        "icon": "icon-RoundedRectangle  icon-c4Limit",
+        "id": "SavneC4SystemLimit",
+        "icon": "icon-RoundedRectangle  icon-SavneC4Limit",
         "rubberband": "rect",
         "command": "savne-c4:add-system-limit",
         "command-arg": {
@@ -61,8 +61,8 @@
       },
       {
         "label": "Container",
-        "id": "C4Container",
-        "icon": "icon-C4Container",
+        "id": "SavneC4Container",
+        "icon": "icon-SavneC4Container",
         "rubberband": "rect",
         "command": "savne-c4:add-container",
         "command-arg": {
@@ -72,8 +72,8 @@
       },
       {
         "label": "Message Bus Container",
-        "id": "C4MessageBusContainer",
-        "icon": "icon-C4MessageBussContainer",
+        "id": "SavneC4MessageBusContainer",
+        "icon": "icon-SavneC4MessageBussContainer",
         "rubberband": "rect",
         "command": "savne-c4:add-message-bus-container",
         "command-arg": {
@@ -83,8 +83,8 @@
       },
       {
         "label": "Component",
-        "id": "C4Component",
-        "icon": "icon-C4Component",
+        "id": "SavneC4Component",
+        "icon": "icon-SavneC4Component",
         "rubberband": "rect",
         "command": "savne-c4:add-component",
         "command-arg": {
@@ -94,8 +94,8 @@
       },
       {
         "label": "Container Limit",
-        "id": "C4ContainerLimit",
-        "icon": "icon-RoundedRectangle icon-c4Limit",
+        "id": "SavneC4ContainerLimit",
+        "icon": "icon-RoundedRectangle icon-SavneC4Limit",
         "rubberband": "rect",
         "command": "savne-c4:add-container-limit",
         "command-arg": {
@@ -105,8 +105,8 @@
       },
       {
         "label": "Database",
-        "id": "C4Database",
-        "icon": "icon-FCDatabase icon-c4FCDatabase",
+        "id": "SavneC4Database",
+        "icon": "icon-FCDatabase icon-SavneC4FCDatabase",
         "rubberband": "rect",
         "command": "savne-c4:add-database",
         "command-arg": {
@@ -116,7 +116,7 @@
       },
       {
         "label": "Relationship",
-        "id": "C4Relationship",
+        "id": "SavneC4Relationship",
         "icon": "icon-UMLInterfaceRealization",
         "rubberband": "rect",
         "command": "savne-c4:add-relationship",
@@ -126,7 +126,7 @@
       },
       {
         "label": "Relationship with technology",
-        "id": "C4RelationshipWithTechnology",
+        "id": "SavneC4RelationshipWithTechnology",
         "icon": "icon-UMLInterfaceRealization",
         "rubberband": "rect",
         "command": "savne-c4:add-relationship_with_technology",

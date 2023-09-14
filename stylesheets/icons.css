@@ -1,62 +1,59 @@
-.icon-C4person {
+.icon-SavneC4person {
     background-image: url("img/elements/person.png");
     background-size: cover;
     height: 10px;
     width: 13px;
-    margin-top: 8px!important;
 }
 
-.icon-C4personExternal {
+.icon-SavneC4personExternal {
     background-image: url("img/elements/person_external.png");
     background-size: cover;
     height: 10px;
     width: 13px;
-    margin-top: 8px!important;
 }
 
-.icon-C4System {
+.icon-SavneC4System {
     background-image: url("img/elements/system.png");
     background-size: cover;
     height: 10px;
-    width: 14px;
-    margin-top: 8px!important;
+    width: 13px;
 }
 
-.icon-C4SystemExternal {
+.icon-SavneC4SystemExternal {
     background-image: url("img/elements/system_external.png");
     background-size: cover;
     height: 10px;
-    width: 13px;
-    margin-top: 8px!important;
+    width: 12px;
+    margin-left: 2px;
 }
 
-.icon-C4Container {
+.icon-SavneC4Container {
     background-image: url("img/elements/container.png");
     background-size: cover;
     height: 10px;
     width: 13px;
-    margin-top: 8px!important;
+    margin-left: 2px;
 }
-.icon-C4Component {
+.icon-SavneC4Component {
     background-image: url("img/elements/component.png");
     background-size: cover;
     height: 10px;
     width: 13px;
-    margin-top: 8px!important;
+    margin-left: 2px;
 }
 
-.icon-C4MessageBussContainer {
+.icon-SavneC4MessageBussContainer {
     background-image: url("img/elements/messageBussContainer.png");
     background-size: cover;
     height: 10px;
     width: 13px;
-    margin-top: 8px!important;
+    margin-left: 2px;
 }
 
-.icon-c4Limit {
-    color: gray;
+.icon-SavneC4Limit {
+    color: rgb(128, 128, 128);
 }
 
-.icon-c4FCDatabase {
+.icon-SavneC4FCDatabase {
     color: #1061B0!important;
 }
