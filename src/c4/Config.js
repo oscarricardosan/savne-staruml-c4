@@ -1,7 +1,6 @@
 const c4_config = {
     system_ids: {
         person: '_PERSON_',
-        person_head: '_PERSON_HEAD_',
         system: '_SYSTEM_',
         system_limit: '_SYSTEM_LIMIT_',
         container: '_CONTAINER_',
