@@ -172,7 +172,6 @@ class Dialog {
         }
 
         const template= this.template.getRelationWithTechnologyTemplate(element);
-        let self = this;
         this.getDialog(template)
             .then(function (response) {
                 if (response.success === 'ok'){
@@ -201,7 +200,7 @@ class Dialog {
     }
 
     getDialog(template) {
-        return new Promise(function (resolve, reject) {
+        return new Promise(function (resolve) {
             template = $(template)
             template.addClass('instance')
             $(window.document.body).append(template)
@@ -231,7 +230,7 @@ class Dialog {
 
             template.data('kendoWindow').center()
 
-            template.one('click', '.dialog-button', function (e) {
+            template.one('click', '.dialog-button', function () {
                 template.data('button', $(this).data('button-id'))
                 template.data('kendoWindow').close()
             })

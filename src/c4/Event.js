@@ -6,7 +6,7 @@ const Config = require("./Config");
 class Event {
     constructor() {}
     doubleClicked(){
-        app.diagrams.on('viewDoubleClicked', (view, x, y) => {
+        app.diagrams.on('viewDoubleClicked', (view) => {
             const element_system = view?.subViews.find(subView => {
                 return Object.values(Config.system_ids).includes(subView.text);
             });

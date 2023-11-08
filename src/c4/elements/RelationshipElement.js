@@ -1,5 +1,4 @@
 const Config = require("../Config");
-const config = require("../Config");
 class RelationshipElement {
     constructor() {
         this.config = Config

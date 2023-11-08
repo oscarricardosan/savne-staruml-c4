@@ -24,7 +24,7 @@ class ContainerElement {
 
         app.factory.createModelAndView(options);
     }
-    getSubViews(parent){
+    getSubViews(){
         let name= new type.UMLTextView();
         name.text= "Container name";
         name.horzAlign= 2;
