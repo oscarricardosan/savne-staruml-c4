@@ -1,9 +1,9 @@
 {
   "name": "savne-startuml-c4",
-  "title": "Model C4",
+  "title": "Savne Model C4",
   "description": "Extension for Creating C4 Diagrams",
   "homepage": "https://savne.net/",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": ["Diagramas-C4", "Savne"],
   "author": {
     "name": "Sebastian Fajardo",
